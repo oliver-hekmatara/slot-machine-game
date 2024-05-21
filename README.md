@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
--   Install [Node.js](https://nodejs.org/) version >=18
+-   Install [Node.js](https://nodejs.org/) version >= 18.13.0
 
 ## To Run
 
