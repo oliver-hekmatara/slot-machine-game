@@ -97,7 +97,7 @@ export default class SlotAnimation {
                     // On spin animation complete.
                     if (elapsedMs >= animationDuration) {
                         ticker.stop();
-                        this.setupResult(reel, outcome[index]);
+                        this.animateResultReels(reel, outcome[index]);
                     }
                 }
             });
@@ -112,7 +112,7 @@ export default class SlotAnimation {
     }
 
     // Display result per reel with bounce animation.
-    private setupResult(reel: PIXI.Container, positions: number[]): void {
+    private animateResultReels(reel: PIXI.Container, positions: number[]): void {
         // Clear "old" sprites from reel.
         while (reel.children.length) {
             reel.removeChildAt(0);
