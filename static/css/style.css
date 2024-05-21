@@ -1,0 +1,190 @@
+@import url("./variables.css");
+@import url("./minireset.min.css");
+@import url("./animations.css");
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../images/casinoBackground.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.slot-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.slot-header {
+    -webkit-text-stroke: 1px #ffd8fd;
+    background: -webkit-linear-gradient(var(--hot-pink), var(--dark-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+    font-family: Honk, sans-serif;
+    font-size: 72px;
+}
+
+.slot-body {
+    width: 720px;
+    height: 460px;
+    background-color: var(--transparent-bg-70);
+    border: 1px solid var(--primary-purple);
+    box-shadow: 0px 0px 20px 10px var(--secondary-purple);
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+    font-size: 24px;
+    display: flex;
+    border-radius: 3px;
+}
+
+.slot-wrapper.win .slot-body {
+    animation: highlightBodyWin 2s ease normal;
+}
+
+.slot-wrapper.win.big-win .slot-body {
+    animation: highlightBodyBigWin 2s ease normal;
+}
+
+.slot-wrapper.no-win .slot-body {
+    animation: highlightBodyNoWin 2s ease normal;
+}
+
+.slot-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    margin-top: 30px;
+    border-radius: 3px;
+    background: var(--transparent-bg-70);
+    padding: 20px;
+    border: 1px solid var(--primary-purple);
+    position: relative;
+}
+.play-button {
+    cursor: pointer;
+    color: #fff;
+    background: url("../images/spinButton.png") no-repeat;
+    border: none;
+    border-radius: 5px;
+    padding: 40px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: block;
+    background-size: contain;
+    transition: all 0.2s;
+}
+
+.play-button:hover {
+    background-image: url("../images/spinButtonHover.png");
+}
+
+.play-button:focus {
+    background-image: url("../images/spinButtonDown.png");
+}
+
+.play-button[disabled] {
+    background-image: url("../images/spinButtonDisabled.png");
+}
+
+.audio-button {
+    width: 45px;
+    position: absolute;
+    left: 25px;
+    fill: #905494;
+    border-radius: 50%;
+    border: 2px solid var(--bright-pink);
+    box-shadow: 0 0 5px var(--bright-pink);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.audio-button.audio-on {
+    fill: #59ffc9;
+}
+
+.slot-result,
+.slot-amount {
+    position: absolute;
+    background: var(--secondary-purple);
+    padding: 25px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid var(--dark-grey);
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 2px var(--light-pink);
+    box-shadow: inset 0px 0px 25px var(--peach);
+    font-size: 0.9rem;
+    height: 40px;
+}
+
+.slot-result {
+    right: 85px;
+    width: 120px;
+}
+
+.slot-amount {
+    right: 25px;
+    width: 60px;
+}
+
+.slot-wrapper.win .slot-result,
+.slot-wrapper.win .slot-amount {
+    animation: highlightWin 2s ease normal;
+}
+
+.slot-wrapper.no-win .slot-result,
+.slot-wrapper.no-win .slot-amount {
+    animation: highlightNoWin 1s ease normal;
+}
+
+.audio {
+    display: none;
+}
+
+#modal {
+    color: var(--modal-green);
+    background-color: var(--transparent-bg-70);
+    border: 1px solid var(--modal-green);
+    box-shadow: 0 0 25px 5px var(--modal-green);
+    padding: 40px;
+    border-radius: 3px;
+    transition: all 2s;
+}
+
+#modal[open] {
+    animation: dialogFadeIn 0.5s ease normal;
+}
+
+#modal button {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin-block-start: 20px;
+    text-transform: uppercase;
+    background: var(--modal-green);
+    border-radius: 2px;
+    cursor: pointer;
+    color: var(--dark-grey);
+}
+
+dialog::backdrop {
+    background: var(--transparent-bg-50);
+    transition: all 2.5s ease;
+}
+
+dialog[open]::backdrop {
+    animation: dialogFadeIn 0.5s ease normal;
+}

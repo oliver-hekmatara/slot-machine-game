@@ -1,0 +1,14 @@
+:root {
+    --primary-purple: #7d57ff;
+    --secondary-purple: #741fff;
+    --dark-pink: #b600c5;
+    --bright-pink: #f342ff;
+    --hot-pink: #ff0094;
+    --light-pink: #daaeff;
+    --primary-green: #57ffa8;
+    --modal-green: #62d997;
+    --peach: #ff9669;
+    --dark-grey: #322f37;
+    --transparent-bg-70: rgba(0, 0, 0, 0.7);
+    --transparent-bg-50: rgba(0, 0, 0, 0.5);
+}
