@@ -1,8 +1,8 @@
+import { post } from "./services/HttpService";
 import { GameOutcome } from "../shared/interfaces/GameOutcome";
 import { WinType } from "../shared/enums";
 import SlotAnimation from "./SlotAnimation";
 import SlotAudio from "./SlotAudio";
-import { post } from "./services/HttpService";
 
 export default class SlotGame {
     private slotWrapper: HTMLElement | null;

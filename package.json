@@ -1,39 +1,32 @@
 {
-  "name": "netent-game-developer-test",
-  "version": "1.0.0",
-  "description": "NetEnt - Game Developer Test",
-  "scripts": {
-    "start": "concurrently --kill-others \"npm run build:server:watch\" \"npm run build:client:watch\"",
-    "build:server:watch": "nodemon -e ts --watch src/server --exec \"tsc -p src/server/tsconfig.json && node dist/server/server.js\"",
-    "build:client:watch": "parcel ./src/client/index.html",
-    "test": "jest --passWithNoTests",
-    "cy:open": "cypress open",
-    "cy:test": "cy:open & cypress run"
-  },
-  "dependencies": {
-    "@pixi/filter-blur": "^7.4.2",
-    "@types/pixi.js": "^5.0.0",
-    "cypress": "6.8.0",
-    "express": "^4.19.2",
-    "pixi.js": "^7.4.2"
-  },
-  "devDependencies": {
-    "@types/cors": "^2.8.17",
-    "@types/express": "4.17.21",
-    "@types/jest": "^29.5.12",
-    "@types/node": "14.17.18",
-    "concurrently": "^8.2.2",
-    "cors": "^2.8.5",
-    "jest": "29.7.0",
-    "nodemon": "^3.1.0",
-    "parcel": "^2.7.0",
-    "parcel-reporter-static-files-copy": "^1.5.0",
-    "punycode": "^1.4.1",
-    "querystring-es3": "^0.2.1",
-    "ts-jest": "^29.1.2",
-    "typescript": "^5.4.3"
-  },
-  "engines": {
-    "node": ">=16.19.0"
-  }
+    "name": "slot-machine-game",
+    "description": "Slot Machine Game",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "concurrently --kill-others \"npm run build:server:watch\" \"npm run build:client:watch\"",
+        "build:server:watch": "nodemon -e ts --watch src/server --exec \"tsc -p src/server/tsconfig.json && node dist/server/server.js\"",
+        "build:client:watch": "parcel ./src/client/index.html"
+    },
+    "dependencies": {
+        "@pixi/filter-blur": "^7.4.2",
+        "@types/pixi.js": "^5.0.0",
+        "express": "^4.19.2",
+        "pixi.js": "^7.4.2"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.17",
+        "@types/express": "4.17.21",
+        "@types/node": "14.17.18",
+        "concurrently": "^8.2.2",
+        "cors": "^2.8.5",
+        "nodemon": "^3.1.0",
+        "parcel": "^2.7.0",
+        "parcel-reporter-static-files-copy": "^1.5.0",
+        "punycode": "^1.4.1",
+        "querystring-es3": "^0.2.1",
+        "typescript": "^5.4.3"
+    },
+    "engines": {
+        "node": ">=16.19.0"
+    }
 }
